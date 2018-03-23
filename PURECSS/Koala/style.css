@@ -1,0 +1,141 @@
+/* colors */
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+    --lightgray: #A6BECF;
+    --gray : #819cAF;
+    --triangle: polygon(50% 0%, 0% 100%, 100% 100%);
+
+  }
+
+
+body{
+    background: mistyrose;
+}
+
+.box{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    width: 600px;
+    height: 420px;
+    background: none;
+    /* border: 3px solid white; */
+
+}
+
+.head{
+    position: absolute;
+    top: calc(calc(100% - 67%) /2); /*16.5%*/
+    left: 25%;
+    width: 50%;
+    height: 67%;
+    background: var(--lightgray);
+    border-radius: 50%;
+
+}
+
+.head-copy{
+    background: var(--lightgray);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.ear-left {
+    background: var(--lightgray);
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    left: -20%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ear-right {
+    background: var(--lightgray);
+    position: absolute;
+    width: 60%;
+    height: 65%;
+    right: -20%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.inner-ear{
+    position: absolute;
+    background: var(--gray);
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+.eye-left{
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 33%;
+    top: calc(calc(100% - 50%)/2);
+    left:calc(calc(100% - 56%)/2);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.eye-right{
+    position: absolute;
+    background: white;
+    width: 30%;
+    height: 33%;
+    top: calc(calc(100% - 50%)/2);
+    right:calc(calc(100% - 56%)/2);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.pupil{
+    position: absolute;
+    background: #27354A;
+    width: 28%;
+    height: 30%;
+    top: calc(calc(100% - 30%)/2);
+    left: calc(calc(100% - 28%)/2);
+    border-radius: 50%;
+}
+
+.nose{
+    position: absolute;
+    background: orange;
+    width : 25%;
+    height: 42.5%;
+    top: calc(calc(100% - 5%)/2);
+    left: calc(calc(100% - 25%)/2);
+    border-radius: 50px;
+    z-index: 4;
+}
+
+.hair-left{
+    position: absolute;
+    background: var(--lightgray);
+    width: 20%;
+    height: 20%;
+    top: calc(calc(-100% + 80%)/2);
+    left: calc(calc(100% - 40%)/2);
+    -webkit-clip-path: var(--triangle);
+    clip-path: var(--triangle);
+}
+
+.hair-right{
+    position: absolute;
+    background: var(--lightgray);
+    width: 20%;
+    height: 20%;
+    top: calc(calc(-100% + 85%)/2);
+    left: calc(calc(100% - 4%)/2);
+    -webkit-clip-path: var(--triangle);
+    clip-path: var(--triangle);
+}
