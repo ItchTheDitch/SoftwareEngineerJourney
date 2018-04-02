@@ -30,8 +30,8 @@ paintToCanvas = () => {
      //take the pixels out
      let pixels = ctx.getImageData(0, 0, width, height);
     // mess with them
-     pixels = greenScreen(pixels);
-    //  ctx.globalAlpha = 0.1;
+     pixels = rgbSplit(pixels);
+     ctx.globalAlpha = 0.1;
      // put them back
     ctx.putImageData(pixels, 0, 0);
 
@@ -65,7 +65,7 @@ redEffect = (pixels) => {
 rgbSplit = (pixels) => {
     for(let i = 0; i < pixels.data.length; i+=4 ){
         pixels.data[i - 150 ] = pixels.data[i + 0]; // Red
-        pixels.data[i + 500 ] = pixels.data[i + 1]; // blue
+        pixels.data[i + 300 ] = pixels.data[i + 1]; // blue
         pixels.data[i - 550 ] = pixels.data[i + 2]; // red
     }
     return pixels;
@@ -101,3 +101,4 @@ rgbSplit = (pixels) => {
 getVideo();
 
 video.addEventListener('canplay', paintToCanvas);
+
