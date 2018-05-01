@@ -1,0 +1,97 @@
+:root{
+    --sunglow : #FDD231;
+    --peach :   #FEEEB7;
+    --spanishOrange: #EA6C00;
+    --chromeYellow:   #FDAD00;
+    --purple:      #210E3D;
+}
+
+body {
+    background: var(--purple);
+}
+
+.box {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top:  8%;
+    border: solid 3px white;
+    height: 400px;
+    width: 600px;
+}
+
+.large-bottom-triangle{
+    position: absolute;
+    width: 50%;
+    left: calc(calc(100% - 50%)/2); /*20%*/
+    bottom: 5%;
+    height: 55%;
+    background: var(--spanishOrange);
+    -webkit-clip-path: polygon(0 0, 49% 100%, 100% 0);
+    clip-path: polygon(0 0, 49% 100%, 100% 0);
+}
+
+.medium-bottom-triangle{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    left: calc(calc(100% - 60%)/2); /*20%*/
+    background: var(--chromeYellow);
+    -webkit-clip-path: polygon(0 0, 49% 100%, 100% 0);
+    clip-path: polygon(0 0, 49% 100%, 100% 0);
+}
+
+.large-top-triangle{
+    position: absolute;
+    height: 30%;
+    width : 30%;
+    background: var(--peach);
+    left: 35%;
+    top: 10.3%;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.right-top-triangle-left{
+    position: absolute;
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background: var(--chromeYellow);
+    height: 30%;
+    width:10%;
+    top: 10.3%;
+    left: 25%
+}
+
+.right-top-triangle-right{
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background: var(--chromeYellow);
+    height: 30%;
+    width:10%;
+    top: 10.3%;
+    right: 25.1%
+}
+
+.medium-top-triangle-left {
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    background: var(--sunglow);
+    width: 15.3%;
+    height:30%;
+    top:10.3%;
+    left:35%
+}
+
+.medium-top-triangle-right {
+    position: absolute;
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background: var(--sunglow);
+    width: 15.3%;
+    height:30%;
+    top:10.3%;
+    right:35%
+}

@@ -1,12 +1,15 @@
 const express = require('express');
 
-const app = express();
+const knex = require('knex');
 
-app.get('/', (req, res) =>{
-    res.send('this is working');
-})
+const postgres = knex ({
+    client: 'pg',
+    connection: {
+      host : '127.0.0.1',
+      user : '',
+      password : '',
+      database : 'smart-brain'
+    }
+  });
 
-app.listen(3300, () => {
-    console.log('app is running on port 3300');
-})
-
+  postgres.select('*').from('users');
